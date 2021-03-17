@@ -4,7 +4,12 @@ import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,15 +17,16 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 @Entity
-@Table(name = "User")
-@DiscriminatorColumn(discriminatorType = DiscriminatorType.STRING, name = "user")
 public class User {
 
-	@Column(name = "User_ID")
+	@Id
+	@GeneratedValue(generator = "UUID")
+	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+	@Column(name = "user_id")
 	private int userID;
-	@Column
+	@Column(name = "first_name")
 	private String firstName;
-	@Column
+	@Column(name = "last_name")
 	private String lastName;
 	@Column
 	private String email;
