@@ -1,5 +1,8 @@
 package app.service.bags;
 
-public class BagsService {
+import org.springframework.stereotype.Service;
+
+@Service
+public interface BagsService {
 
 }

@@ -13,16 +13,18 @@ import org.hibernate.annotations.GenericGenerator;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Data
-@AllArgsConstructor
 @Entity
+@Data
+@NoArgsConstructor
 public class User {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(generator = "UUID")
+	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
 	@Column(name = "user_id")
-	private int userID;
+	private String userID;
 	@Column(name = "first_name")
 	private String firstName;
 	@Column(name = "last_name")

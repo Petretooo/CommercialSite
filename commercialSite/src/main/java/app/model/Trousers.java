@@ -15,23 +15,25 @@ import org.hibernate.annotations.GenericGenerator;
 
 import app.util.Quantity;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-//@Entity
+@Entity
 @Data
+@NoArgsConstructor
 public class Trousers {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "product_id")
-	private int productID;
-	@Column(name = "product_quantity")
-	private Quantity productQuantity;
-	@Column(name = "product_brand")
-	private String productBrand;
-	@Column(name = "product_model")
-	private String productModel; // male,female,unisex
+	@Column(name = "trousers_id")
+	private String trousersID;
+	@Column(name = "trousers_quantity")
+	private Quantity trousersQuantity;
+	@Column(name = "trousers_brand")
+	private String trousersBrand;
+	@Column(name = "trousers_model")
+	private String trousersModel; // male,female,unisex
 	@Column
 	private String description;
-	@Column
+	@Column(name = "in_stock")
 	private boolean inStock;
 	@Column
 	private String colour;

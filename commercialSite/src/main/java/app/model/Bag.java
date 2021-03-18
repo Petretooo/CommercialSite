@@ -17,15 +17,17 @@ import app.util.Quantity;
 import app.util.ShoesSize;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@NoArgsConstructor
 public class Bag {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "bag_id")
-	private int bagID;
+	private String bagID;
 	@Column(name = "bag_quantity")
 	private Quantity bagQuantity;
 	@Column(name = "bag_brand")

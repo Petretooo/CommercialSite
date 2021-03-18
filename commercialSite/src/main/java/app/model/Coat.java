@@ -15,15 +15,17 @@ import org.hibernate.annotations.GenericGenerator;
 
 import app.util.Quantity;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-//@Entity
+@Entity
 @Data
+@NoArgsConstructor
 public class Coat {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "coat_id")
-	private int coatID;
+	private String coatID;
 	@Column(name = "coat_quantity")
 	private Quantity coatQuantity;
 	@Column(name = "coat_brand")
@@ -32,7 +34,7 @@ public class Coat {
 	private String coatModel; // male,female,unisex
 	@Column
 	private String description;
-	@Column
+	@Column(name = "in_stock")
 	private boolean inStock;
 	@Column
 	private int size;

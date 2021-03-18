@@ -7,5 +7,7 @@ import app.model.Bag;
 
 @Repository
 public interface BagRepository extends CrudRepository<Bag, String> {
-
+	
+	
+	
 }

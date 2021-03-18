@@ -16,15 +16,17 @@ import org.hibernate.annotations.GenericGenerator;
 
 import app.util.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@NoArgsConstructor
 public class Shoes {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "shoes_id")
-	private int shoesID;
+	private String shoesID;
 	@Column(name = "shoes_quantity")
 	private Quantity shoesQuantity;
 	@Column(name = "shoes_brand")
@@ -33,7 +35,7 @@ public class Shoes {
 	private String shoesModel; // male,female,unisex
 	@Column
 	private String description;
-	@Column
+	@Column(name = "in_stock")
 	private boolean inStock;
 	@Column(name = "shoes_size")
 	private ShoesSize shoesSize;
