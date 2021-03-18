@@ -20,8 +20,7 @@ import lombok.Data;
 @Data
 public class Trousers {
 	@Id
-	@GeneratedValue(generator = "UUID")
-	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "product_id")
 	private int productID;
 	@Column(name = "product_quantity")
@@ -34,5 +33,7 @@ public class Trousers {
 	private String description;
 	@Column
 	private boolean inStock;
+	@Column
+	private String colour;
 
 }

@@ -23,8 +23,7 @@ import lombok.Data;
 public class Bag {
 
 	@Id
-	@GeneratedValue(generator = "UUID")
-	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "bag_id")
 	private int bagID;
 	@Column(name = "bag_quantity")

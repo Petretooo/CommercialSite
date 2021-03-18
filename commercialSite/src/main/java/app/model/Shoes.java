@@ -22,8 +22,7 @@ import lombok.Data;
 public class Shoes {
 
 	@Id
-	@GeneratedValue(generator = "UUID")
-	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "shoes_id")
 	private int shoesID;
 	@Column(name = "shoes_quantity")

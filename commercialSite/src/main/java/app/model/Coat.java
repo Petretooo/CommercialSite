@@ -21,16 +21,15 @@ import lombok.Data;
 public class Coat {
 
 	@Id
-	@GeneratedValue(generator = "UUID")
-	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-	@Column(name = "product_id")
-	private int productID;
-	@Column(name = "product_quantity")
-	private Quantity productQuantity;
-	@Column(name = "product_brand")
-	private String productBrand;
-	@Column(name = "product_model")
-	private String productModel; // male,female,unisex
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "coat_id")
+	private int coatID;
+	@Column(name = "coat_quantity")
+	private Quantity coatQuantity;
+	@Column(name = "coat_brand")
+	private String coatBrand;
+	@Column(name = "coat_model")
+	private String coatModel; // male,female,unisex
 	@Column
 	private String description;
 	@Column

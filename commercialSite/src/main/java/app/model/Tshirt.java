@@ -21,18 +21,17 @@ import lombok.Data;
 
 @Data
 public class Tshirt {
-	
+
 	@Id
-	@GeneratedValue(generator = "UUID")
-	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-	@Column(name = "product_id")
-	private int productID;
-	@Column(name = "product_quantity")
-	private Quantity productQuantity;
-	@Column(name = "product_brand")
-	private String productBrand;
-	@Column(name = "product_model")
-	private String productModel; // male,female,unisex
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "tshirt_id")
+	private int tshirtID;
+	@Column(name = "tshirt_quantity")
+	private Quantity tshirtQuantity;
+	@Column(name = "tshirt_brand")
+	private String tshirtBrand;
+	@Column(name = "tshirt_model")
+	private String tshirtModel; // male,female,unisex
 	@Column
 	private String description;
 	@Column
