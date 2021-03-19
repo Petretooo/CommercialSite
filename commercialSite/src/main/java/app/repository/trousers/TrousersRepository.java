@@ -1,11 +1,24 @@
 package app.repository.trousers;
 
-import org.springframework.data.repository.CrudRepository;
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import app.model.Trousers;
 
 @Repository
-public interface TrousersRepository extends CrudRepository<Trousers, String> {
+public interface TrousersRepository extends JpaRepository<Trousers, String> {
+
+	List<Trousers> findByColour(String colour);
+
+	List<Trousers> findByInStockIsTrue();
+
+	List<Trousers> findBySize(int size);
+
+	List<Trousers> findByPriceGreaterThanEqual(double price);
+
+	List<Trousers> findBytrousersModel(String model);
+
 
 }

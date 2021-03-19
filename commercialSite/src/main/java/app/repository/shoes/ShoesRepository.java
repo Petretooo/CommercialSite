@@ -12,7 +12,7 @@ import app.util.ShoesSize;
 @Repository
 public interface ShoesRepository extends JpaRepository<Shoes, String> {
 
-	List<Shoes> findBySize(ShoesSize size);
+	List<Shoes> findBySize(int size);
 	
 	List<Shoes> findByPriceLessThanEqual(double price);
 	
