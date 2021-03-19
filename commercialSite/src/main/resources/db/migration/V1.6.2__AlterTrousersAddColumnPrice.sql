@@ -1,0 +1,1 @@
+alter table trousers add price double;

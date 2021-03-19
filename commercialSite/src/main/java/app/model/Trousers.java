@@ -26,7 +26,7 @@ public class Trousers {
 	@Column(name = "trousers_id")
 	private String trousersID;
 	@Column(name = "trousers_quantity")
-	private Quantity trousersQuantity;
+	private int trousersQuantity;
 	@Column(name = "trousers_brand")
 	private String trousersBrand;
 	@Column(name = "trousers_model")

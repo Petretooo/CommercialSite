@@ -1,0 +1,1 @@
+alter table coat add price double;

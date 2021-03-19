@@ -27,7 +27,7 @@ public class Coat {
 	@Column(name = "coat_id")
 	private String coatID;
 	@Column(name = "coat_quantity")
-	private Quantity coatQuantity;
+	private int coatQuantity;
 	@Column(name = "coat_brand")
 	private String coatBrand;
 	@Column(name = "coat_model")

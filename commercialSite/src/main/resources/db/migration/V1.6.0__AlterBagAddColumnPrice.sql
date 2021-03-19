@@ -1,0 +1,1 @@
+alter table bag add price double;

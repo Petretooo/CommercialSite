@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 
 import app.model.Shoes;
 import app.repository.shoes.ShoesRepository;
+import app.util.ShoesSize;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @Service
 @AllArgsConstructor
-
 public class ShoesServiceImpl implements ShoesService {
 
 	@Autowired
@@ -47,7 +47,7 @@ public class ShoesServiceImpl implements ShoesService {
 	}
 
 	@Override
-	public List<Shoes> purchaseShoes(Shoes sh) {
+	public List<Shoes> purchaseShoes(Shoes sh, String userId) {
 		List<Shoes> purchasedShoesList = new ArrayList<>();
 		if (sh.getClass().equals(Shoes.class)) {
 			purchasedShoesList.add(sh);
@@ -58,13 +58,12 @@ public class ShoesServiceImpl implements ShoesService {
 
 	@Override
 	public List<Shoes> shoesByPrice(double price) {
-		// TODO Auto-generated method stub
-		return null;
+		return shoesRepository.findByPriceLessThanEqual(price);
 	}
 
 	@Override
 	public List<Shoes> getAllShoesBySize(int size) {
-		return shoesRepository.findBySize(size);
+		return shoesRepository.findBySizeEquals(size);
 	}
 
 }

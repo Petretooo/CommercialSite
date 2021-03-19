@@ -1,0 +1,1 @@
+alter table tshirt add price double;

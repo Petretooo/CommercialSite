@@ -16,7 +16,7 @@ public interface ShoesService {
 
 	public boolean checkIfInStock(String Id);
 
-	public List<Shoes> purchaseShoes(Shoes sh);
+	public List<Shoes> purchaseShoes(Shoes sh, String userId);
 
 	public List<Shoes> shoesByPrice(double price);
 	

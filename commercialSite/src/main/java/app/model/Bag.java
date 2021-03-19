@@ -29,7 +29,7 @@ public class Bag {
 	@Column(name = "bag_id")
 	private String bagID;
 	@Column(name = "bag_quantity")
-	private Quantity bagQuantity;
+	private int bagQuantity;
 	@Column(name = "bag_brand")
 	private String bagBrand;
 	@Column(name = "bag_model")

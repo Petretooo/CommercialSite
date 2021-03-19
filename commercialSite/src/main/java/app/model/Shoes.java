@@ -28,7 +28,7 @@ public class Shoes {
 	@Column(name = "shoes_id")
 	private String shoesID;
 	@Column(name = "shoes_quantity")
-	private Quantity shoesQuantity;
+	private int shoesQuantity;
 	@Column(name = "shoes_brand")
 	private String shoesBrand;
 	@Column(name = "shoes_model")
@@ -38,7 +38,7 @@ public class Shoes {
 	@Column(name = "in_stock")
 	private boolean inStock;
 	@Column(name = "shoes_size")
-	private ShoesSize shoesSize;
+	private double shoesSize;
 	@Column
 	private double price;
 
