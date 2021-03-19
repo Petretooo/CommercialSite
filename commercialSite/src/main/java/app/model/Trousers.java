@@ -37,5 +37,7 @@ public class Trousers {
 	private boolean inStock;
 	@Column
 	private String colour;
+	@Column
+	private double price;
 
 }

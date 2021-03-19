@@ -38,5 +38,7 @@ public class Bag {
 	private String description;
 	@Column(name = "in_stock")
 	private boolean inStock;
+	@Column
+	private double price;
 
 }

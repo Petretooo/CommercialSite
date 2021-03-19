@@ -40,5 +40,7 @@ public class Coat {
 	private int size;
 	@Column
 	private String colour;
+	@Column
+	private double price;
 
 }

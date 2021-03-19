@@ -39,5 +39,8 @@ public class Shoes {
 	private boolean inStock;
 	@Column(name = "shoes_size")
 	private ShoesSize shoesSize;
+	@Column
+	private double price;
 
+	
 }
