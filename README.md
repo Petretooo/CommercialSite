@@ -78,6 +78,7 @@ Future: RESTful architecture
 # Access the application
 
 Backend server's port: 8080
+
 Frontend server's port: 3000
 
 Access the deployed web application at: http://localhost:8080/commercialSite
